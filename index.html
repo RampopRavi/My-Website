@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="images/home-pic.png" alt="">
+        <h3> Rampop <span>Ravi</span> </h3>
+        <p> i am a <span class="typing-text">front end developer</span> </p>
+        <a href="#about" class="btn">about me</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about <span>me</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="images/about-pic.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3> my name is <span> Raviender </span> </h3>
+            <p class="info">i've worked hard in my education and now i'm ready to apply my knowledge into practice. While i don't have any real-life work experience, i've had a lot of exposure to the business environment. A lot of my courses involved working with real companies to solve real problems.</p>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> age: </span> 19 </p>
+                    <p> <span> gender: </span> male </p>
+                    <p> <span> profession : </span> student</p>
+                </div>
+                <div class="box">
+                    <p> <span> language : </span> tamil / english </p>
+                    <p> <span> phone : </span> +91 6385360084</p>
+                    <p> <span> email : </span> rampopravi41@gmail.com </p>
+            </div>
+            </div>
+            <a href="#" class="btn">download CV</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> contact <span> me </span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="images/contact-img.svg" alt="">
+        </div>
+
+        <form action="">
+
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+
+            <input type="text" placeholder="subject" class="box">
+
+            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" class="btn" value="send message">
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section  -->
+
+<div class="footer"> created by <span> Mr. Rampop</span> | all rights reserved! </div>
+<!-- javascript part  -->
+
+<!-- particles.js links  -->
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- vanilla-tilt.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+
+</body>
+</html>
